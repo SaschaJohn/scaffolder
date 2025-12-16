@@ -1,0 +1,25 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: my-template
+  title: Component Template
+  description: Call an api
+  tags:
+    - api
+spec:
+  owner: platform
+  type: component
+
+  steps:
+    - id: call
+      name: call api
+      action: alsenseavdgroup:call-api
+      input:
+        displayName: "testsjh"
+        mailNickname: "testsjh"
+
+  output:
+    text:
+      - title: Result
+        content: |
+          **Result:** `${{ steps['call'].output.result }}`
