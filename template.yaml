@@ -10,23 +10,6 @@ spec:
   owner: platform
   type: component
 
-  parameters:
-    - title: Choose a location
-      required:
-        - repoUrl
-      properties:
-       repoUrl:
-         title: Repository Location
-         type: string
-         ui:field: RepoUrlPicker
-         ui:options:
-           allowedHosts:
-             - dev.azure.com        
-           requestUserCredentials:
-             secretsKey: USER_OAUTH_TOKEN
-             additionalScopes:
-               azure: []
-
   steps:
     - id: call
       name: call api
